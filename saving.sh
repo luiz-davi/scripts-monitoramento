@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cout=1
+count=1
 git add .
-git commit -m "adicionando monitoramento a novos processos"
+git commit -m "teste script v$count"
