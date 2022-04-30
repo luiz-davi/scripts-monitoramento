@@ -9,7 +9,7 @@ while [ True ]
 do
 	mem=`free | grep Mem | awk '{print $3, $4, $5, $6}'`
 	swap=`free | grep Swap | awk '{print $3}'`
-	disco=`df | grep sdb7 | awk '{print $3}'`
+	disco=`df | grep rootfs | awk '{print $3}'`
 	cpu=`mpstat 1 1 | grep Average | awk '{print $3, $5, $8, $12}'`
 	data=`date --rfc-3339=seconds`
 
