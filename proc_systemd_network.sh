@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo System %Cpu Cpu VSZ RSS Mem Swap Threads > mn_log.txt
+echo System %Cpu Cpu VSZ RSS Mem Swap Threads > systemd_network_log.txt
 echo System %Cpu Cpu VSZ RSS Mem Swap Threads
 
 while [ True ]
 do
 
-	pid=`ps aux | grep pulseaudio | grep ? | awk '{print $2}'`
-	proc=`pidstat -u -h -p $pid -r 1 1 | grep pulseaudio | awk '{print $5, $8, $9, $12, $13, $14}'`
+	pid=`ps aux | grep systemd-network | grep ? | awk '{print $2}'`
+	proc=`pidstat -u -h -p $pid -r 1 1 | grep systemd-network | awk '{print $5, $8, $9, $12, $13, $14}'`
 	swap=`cat /proc/$pid/status | grep VmSwap | awk '{print $2}'`
 	threads=`cat /proc/$pid/status | grep Threads | awk '{print $2}'`
 
