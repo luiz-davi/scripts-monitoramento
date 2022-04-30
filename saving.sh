@@ -13,5 +13,5 @@
 git add .
 git commit -m "script para commits automáticos"
 git push
-echo "luiz-davi"
-echo "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"
+echo luiz-davi
+echo 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
